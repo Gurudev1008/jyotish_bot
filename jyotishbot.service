@@ -1,0 +1,13 @@
+[Unit]
+Description=Jyotish Telegram Bot with Lava Webhook
+After=network.target
+
+[Service]
+WorkingDirectory=/path/to/jyotish_bot
+ExecStart=/usr/bin/python3 start.sh
+Restart=always
+User=root
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Lava Webhook Server
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/jyotish_bot
+ExecStart=/usr/bin/python3 lava_webhook.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
